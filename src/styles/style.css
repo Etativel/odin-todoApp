@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    border: solid black 1px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 0.9fr 4fr;
+
+}
+
+.sidebar {
+    grid-column: 1;
+
+}
+
+.main-content {
+    grid-column: 2;
+
+}
+
+.todo-main-container {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.nav {
+    position: sticky;
+
+}
+
+.test {
+    height: 20px;
+}
