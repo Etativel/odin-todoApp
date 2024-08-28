@@ -3,7 +3,8 @@
     padding: 0px;
     box-sizing: border-box;
 
-    border: solid black 1px;
+    /* border: solid black 1px; */
+    font-family: sans-serif;
 }
 
 body {
@@ -21,24 +22,41 @@ body {
 
 .sidebar {
     grid-column: 1;
+    background-color: #fcfaf8;
 
 }
 
 .main-content {
     grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
 
 }
 
 .todo-main-container {
+    flex-grow: 1;
     overflow-y: auto;
-    height: 100vh;
+    /* height: 100%; */
+    padding: 0px 55px 84px;
+    justify-content: center;
 }
 
 .nav {
     position: sticky;
+    padding: 12px;
+    text-align: center;
+    border-bottom: solid black 1px;
 
 }
 
-.test {
-    height: 20px;
+.project {
+    height: 100px;
+    width: 100%;
+    border-bottom: solid black 1px;
+}
+
+.font-color {
+    /* color: #bfbfbf; */
 }
