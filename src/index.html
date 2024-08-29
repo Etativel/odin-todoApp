@@ -7,9 +7,93 @@
     <link rel="shortcut icon" href="" type="image/x-icon" class="favicon">
 </head>
 <body>
+
+
+
+
+
+
+
     <div class="content">
-        <div class="sidebar font-color">
-            This is sidebar
+        <dialog class="formDialog" open>
+            <form action="" class="dialog-form">
+                <div class="form-container">
+                    <input type="text" placeholder="Task name" class="task-name-input">
+                    <input type="text" placeholder="Description" class="task-desc-input">
+                    <div class="task-details">
+                        <input type="date" id="due-date" name="due-date">
+                        <select id="">
+                            <option value="" disabled selected>Select priority</option>
+                            <option value="p1">Priority 1</option>
+                            <option value="p2">Priority 2</option>
+                            <option value="p3">Priority 3</option>
+                            <option value="p4">Priority 4</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-btn">
+                    <button class="cancel-form">
+                        Cancel
+                    </button>
+                    <button type="submit" class="submit-form">
+                        Add Task
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <div class="sidebar">
+            <div class="profile">
+                Farhan
+            </div>
+            <div class="sidebar-btn__container">
+                <div class="add-task__sidebar">
+                    <button class="add-task-btn">
+                        Add Task
+                    </button>
+                </div>
+                <div class="search-task">
+                    <button class="search-btn">
+                        Search
+                    </button>
+                </div>
+                <div class="inbox-task">
+                    <button class="inbox-btn">
+                        Inbox
+                    </button>
+                </div>
+                <div class="today-task">
+                    <button class="today-task-btn">
+                        Today Task
+                    </button>
+                </div>
+                <div class="upcoming-task">
+                    <button class="upcoming-task-btn">
+                        Upcoming
+                    </button>
+                </div>
+            </div>
+            <div class="sidebar-project-btn__container">
+                <div class="add-project-container">
+                    <span>
+                        My Project
+                    </span>
+                    <button class="add-project-btn">
+                        +
+                    </button>
+                    <button class="hide-project-btn">
+                        updown symbol
+                    </button>
+                </div>
+                <div class="sub-project-container">
+                    <div class="sub-project-btn">
+                        Work
+                    </div>
+                    <div class="sub-project-btn">
+                        Class
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="main-content">
@@ -17,10 +101,79 @@
                 this is Nav
             </div>
             <div class="todo-main-container">
-                <div class="project-1 project">
-                    
+                <div class="project-container project">
+                    <div class="project-title">
+                        My Project
+                    </div>
+
+                    <div class="task-container__position">
+
+                        <div class="task-container">
+                            <div class="overflow-act">
+                                ...
+                            </div>
+                            <input type="checkbox" name="" id="">
+                            <div class="task-item">
+                                Wash the dishses
+                            </div>
+                        </div>
+                        <div class="task-container">
+                            <div class="overflow-act">
+                                ...
+                            </div>
+                            <input type="checkbox" name="" id="">
+                            <div class="task-item">
+                                Wash the dishses
+                            </div>
+                        </div>
+                        <div class="task-container">
+                            <div class="overflow-act">
+                                ...
+                            </div>
+                            <input type="checkbox" name="" id="">
+                            <div class="task-item">
+                                Wash the dishses
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="project-2 project"></div>
+                <div class="project-container project">
+                    <div class="project-title">
+                        My Project
+                    </div>
+
+                    <div class="task-container__position">
+
+                        <div class="task-container">
+                            <div class="overflow-act">
+                                ...
+                            </div>
+                            <input type="checkbox" name="" id="">
+                            <div class="task-item">
+                                Wash the dishses
+                            </div>
+                        </div>
+                        <div class="task-container">
+                            <div class="overflow-act">
+                                ...
+                            </div>
+                            <input type="checkbox" name="" id="">
+                            <div class="task-item">
+                                Wash the dishses
+                            </div>
+                        </div>
+                        <div class="task-container">
+                            <div class="overflow-act">
+                                ...
+                            </div>
+                            <input type="checkbox" name="" id="">
+                            <div class="task-item">
+                                Wash the dishses
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

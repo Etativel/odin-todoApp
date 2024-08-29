@@ -31,6 +31,10 @@ body {
 
 }
 
+.profile {
+    height: 55.2px;
+}
+
 .main-content {
     grid-column: 2;
     display: flex;
@@ -45,7 +49,10 @@ body {
     overflow-y: auto;
     /* height: 100%; */
     padding: 0px 55px 84px;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .nav {
@@ -53,6 +60,7 @@ body {
     padding: 12px;
     text-align: center;
     border-bottom: solid black 1px;
+    height: 55.2px;
 
 }
 
@@ -62,6 +70,73 @@ body {
     border-bottom: solid black 1px;
 }
 
-.font-color {
-    /* color: #bfbfbf; */
+.project-container {
+    padding-top: 32px;
+    max-width: 80%;
+    height: fit-content;
+    left: 24px;
+    padding-right: 32px;
+    padding-left: 32px;
+    padding-bottom: 12px;
+}
+
+.task-container {
+    
+    display: flex;
+    /* max-width: 00px; */
+    padding: 24px;
+    gap: 8px;
+}
+
+.task-container__position {
+    display: flex;
+    flex-direction: column;
+}
+
+.overflow-act {
+    padding: 0px 3px 0px 0px;
+}
+
+
+/* Form Dialog */
+.formDialog {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    /* right: 50%; */
+    /* transform: translate(-50%, -50%); */
+
+    border: none;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    border: solid black 1px;
+}
+
+.dialog-form {
+    height: 200px;
+    width: 500px;
+    /* border: solid black 1px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container {
+    /* padding: 24px; */
+    display: flex;
+    flex-direction: column;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: flex-end;
+    /* padding: 24px; */
+    gap: 12px;
+}
+
+.task-name-input,
+.task-desc-input {
+    display: flex;
+    flex-wrap: wrap;
 }
