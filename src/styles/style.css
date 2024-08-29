@@ -93,10 +93,6 @@ body {
     flex-direction: column;
 }
 
-.task__column {
-    /* width: 100px; */
-}
-
 .overflow-act {
     padding: 0px 3px 0px 0px;
     visibility: hidden;
@@ -166,4 +162,15 @@ body {
 .task-desc-input {
     display: flex;
     flex-wrap: wrap;
+}
+
+.checkbox {
+    border-radius: 50%;
+    padding: 9px;
+    border: solid rgb(211, 211, 211) 1px;
+    background-color: white;
+}
+
+.checkbox:hover{
+    background-color: rgb(109, 226, 255);
 }

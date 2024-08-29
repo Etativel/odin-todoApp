@@ -6,10 +6,8 @@ import addTodo from "./pages/addTodo";
 const faviconContainer = document.querySelector(".favicon");
 faviconContainer.href = favicon;
 
-
 // Show dialog
 const dialogContainer = document.querySelector('.formDialog')
-const submitTask = document.querySelector('.submit-form-btn')
 const closeDialog = document.querySelector('.cancel-form-btn')
 const showDialog = document.querySelector('.add-task-btn')
 const formDialog = document.querySelector('.dialog-form')
@@ -28,9 +26,11 @@ formDialog.addEventListener('submit', (e)=>{
     addTodo()
     formDialog.reset()
     dialogContainer.close()
+    loadTodo()
 })
-
 
 // Load todo to DOM
 import loadTodo from "./pages/loadTodo";
-loadTodo()
+document.addEventListener('DOMContentLoaded',()=>{
+    loadTodo()
+})
