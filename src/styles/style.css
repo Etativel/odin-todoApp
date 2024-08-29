@@ -81,7 +81,7 @@ body {
 }
 
 .task-container {
-    
+    align-items: flex-start;
     display: flex;
     /* max-width: 00px; */
     padding: 24px;
@@ -93,9 +93,36 @@ body {
     flex-direction: column;
 }
 
+.task__column {
+    /* width: 100px; */
+}
+
 .overflow-act {
     padding: 0px 3px 0px 0px;
+    visibility: hidden;
 }
+
+
+/* Task Styling */
+.task-container {
+    align-items: flex-start;
+    display: flex;
+    padding: 24px;
+    gap: 8px;
+}
+
+.task-check {
+    margin-top: 6px;
+}
+
+.task-desc,
+.task-title{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 100%;
+}
+
 
 
 /* Form Dialog */
