@@ -15,14 +15,14 @@
 
 
     <div class="content">
-        <dialog class="formDialog" open>
+        <dialog class="formDialog">
             <form action="" class="dialog-form">
                 <div class="form-container">
-                    <input type="text" placeholder="Task name" class="task-name-input">
-                    <input type="text" placeholder="Description" class="task-desc-input">
+                    <input type="text" placeholder="Task name" class="task-name-input" required>
+                    <input type="text" placeholder="Description" class="task-desc-input" required>
                     <div class="task-details">
-                        <input type="date" id="due-date" name="due-date">
-                        <select id="">
+                        <input type="date" class="due-date" name="due-date">
+                        <select id="" class="task-priority">
                             <option value="" disabled selected>Select priority</option>
                             <option value="p1">Priority 1</option>
                             <option value="p2">Priority 2</option>
@@ -33,10 +33,10 @@
                     </div>
                 </div>
                 <div class="form-btn">
-                    <button class="cancel-form">
+                    <button class="cancel-form-btn">
                         Cancel
                     </button>
-                    <button type="submit" class="submit-form">
+                    <button type="submit" class="submit-form-btn">
                         Add Task
                     </button>
                 </div>
@@ -101,38 +101,69 @@
                 this is Nav
             </div>
             <div class="todo-main-container">
+                <!-- New Project Here -->
                 <div class="project-container project">
                     <div class="project-title">
                         My Project
                     </div>
-
+                    <!-- Container for new task of the project -->
                     <div class="task-container__position">
-
+                        <!-- The task -->
                         <div class="task-container">
                             <div class="overflow-act">
                                 ...
                             </div>
-                            <input type="checkbox" name="" id="">
-                            <div class="task-item">
-                                Wash the dishses
+                            <input type="checkbox" name="" id="" class="task-check">
+                            <div class="task__column">
+                                <span class="task-title">
+                                    WalkinW
+                                </span>
+                                <span class="task-desc">
+                                    Walking the dogWalking the dogWalking the
+                                    Walking the dogWalking the dogWalking the
+                                    Walking the dogWalking the dogWalking the
+                                </span>
+                                <span>
+                                    Due Date
+                                </span>
                             </div>
                         </div>
                         <div class="task-container">
                             <div class="overflow-act">
                                 ...
                             </div>
-                            <input type="checkbox" name="" id="">
-                            <div class="task-item">
-                                Wash the dishses
+                            <input type="checkbox" name="" id="" class="task-check">
+                            <div class="task__column">
+                                <span class="task-title">
+                                    WalkinW
+                                </span>
+                                <span class="task-desc">
+                                    Walking the dogWalking the dogWalking the
+                                    Walking the dogWalking the dogWalking the
+                                    Walking the dogWalking the dogWalking the
+                                </span>
+                                <span>
+                                    Due Date
+                                </span>
                             </div>
                         </div>
                         <div class="task-container">
                             <div class="overflow-act">
                                 ...
                             </div>
-                            <input type="checkbox" name="" id="">
-                            <div class="task-item">
-                                Wash the dishses
+                            <input type="checkbox" name="" id="" class="task-check">
+                            <div class="task__column">
+                                <span class="task-title">
+                                    WalkinW
+                                </span>
+                                <span class="task-desc">
+                                    Walking the dogWalking the dogWalking the
+                                    Walking the dogWalking the dogWalking the
+                                    Walking the dogWalking the dogWalking the
+                                </span>
+                                <span>
+                                    Due Date
+                                </span>
                             </div>
                         </div>
                     </div>
