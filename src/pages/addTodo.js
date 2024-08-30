@@ -1,3 +1,4 @@
+// Check which page user at
 let storageKey = "todos";
 function addTodo(){
     const taskName = document.querySelector('.task-name-input').value;

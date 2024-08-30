@@ -1,6 +1,7 @@
+// should check if user on project page
 import deleteTodo from "./deleteTodo";
 let storageKey = "todos";
-function loadTodo (){
+function loadTodo (projectId){
     const taskContainerPosition = document.querySelector('.task-container__position')
     taskContainerPosition.innerHTML = ""
     console.log(taskContainerPosition)
@@ -27,6 +28,7 @@ function loadTodo (){
         const checkBox = taskContainer.querySelector('.task-check')
         checkBox.addEventListener("click",()=>{
             checkBox.style.background = 'rgb(109, 226, 255)';
+            
             deleteTodo(todo.id);
         });
         taskContainerPosition.appendChild(taskContainer);

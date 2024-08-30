@@ -34,3 +34,15 @@ import loadTodo from "./pages/loadTodo";
 document.addEventListener('DOMContentLoaded',()=>{
     loadTodo()
 })
+
+
+// Get all sidebar button
+const addTaskBtn = document.querySelector('.add-task-btn');
+const searchBtn = document.querySelector('.search-btn');
+const inboxBtn = document.querySelector('.inbox-btn');
+const todayBtn = document.querySelector('.today-task-btn');
+const upcomingBtn = document.querySelector('.upcoming-task-btn');
+const addProjectBtn = document.querySelector('.add-project-btn');
+
+
+

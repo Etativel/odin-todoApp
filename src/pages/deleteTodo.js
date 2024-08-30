@@ -6,9 +6,8 @@ function deleteTodo (id) {
         console.log('there is no todo in the storage')
         return
     }
-
-    
-
+    const filterTodo = todoObject.filter(todo => todo.id !== id)
+    localStorage.setItem(storageKey, JSON.stringify(filterTodo));
     
     loadTodo()
 };
