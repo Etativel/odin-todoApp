@@ -80,7 +80,7 @@ upcomingBtn.addEventListener("click", () => {
 // Load add project dialog
 import addProject from "./pages/addProject";
 import loadProject from "./pages/loadProject";
-import pageStyling from "./pages/pageStyling";
+
 const projectFormDialog = document.querySelector('.project-dialog-form');
 const projectDialogContainer = document.querySelector('.projectFormDialog');
 const projectCloseDialog = document.querySelector('.project-cancel-form-btn');
