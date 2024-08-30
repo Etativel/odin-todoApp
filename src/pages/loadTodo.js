@@ -1,7 +1,10 @@
 // should check if user on project page
 import deleteTodo from "./deleteTodo";
-let storageKey = "todos";
-function loadTodo (projectId){
+import pageStyling from "./pageStyling";
+
+function loadTodo (currentPage){
+    let storageKey = currentPage;
+    pageStyling(currentPage);
     const taskContainerPosition = document.querySelector('.task-container__position')
     taskContainerPosition.innerHTML = ""
     console.log(taskContainerPosition)

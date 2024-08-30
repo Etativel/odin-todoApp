@@ -35,6 +35,23 @@
                 </div>
             </form>
         </dialog>
+<!-- Project Dialog -->
+        <dialog class="projectFormDialog">
+            <form action="" class="project-dialog-form">
+                <div class="project-form-container">
+                    <input type="text" placeholder="Project name" class="project-name-input" required>
+
+                </div>
+                <div class="project-form-btn">
+                    <button class="project-cancel-form-btn">
+                        Cancel
+                    </button>
+                    <button type="submit" class="project-submit-form-btn">
+                        Add Task
+                    </button>
+                </div>
+            </form>
+        </dialog>
         <div class="sidebar">
             <div class="profile">
                 Farhan
@@ -51,17 +68,17 @@
                     </button>
                 </div>
                 <div class="inbox-task">
-                    <button class="inbox-btn">
+                    <button class="inbox-btn active-btn" id="inbox">
                         Inbox
                     </button>
                 </div>
                 <div class="today-task">
-                    <button class="today-task-btn">
+                    <button class="today-task-btn active-btn" id="today">
                         Today Task
                     </button>
                 </div>
                 <div class="upcoming-task">
-                    <button class="upcoming-task-btn">
+                    <button class="upcoming-task-btn active-btn" id="upcoming">
                         Upcoming
                     </button>
                 </div>
@@ -80,10 +97,14 @@
                 </div>
                 <div class="sub-project-container">
                     <div class="sub-project-btn">
-                        Work
+                        <button class="project-btn active-btn" id="use-date-1">
+                            Work
+                        </button>
                     </div>
                     <div class="sub-project-btn">
-                        Class
+                        <button class="project-btn active-btn" id="use-date-2">
+                            Class
+                        </button>
                     </div>
                 </div>
             </div>
@@ -106,43 +127,6 @@
                     </div>
                 </div>
                 <!-- New Project Here -->
-                <div class="project-container project">
-                    <div class="project-title">
-                        My Project
-                    </div>
-
-                    <div class="task-container__position">
-
-                        <div class="task-container">
-                            <div class="overflow-act">
-                                ...
-                            </div>
-                            <input type="checkbox" name="" id="">
-                            <div class="task-item">
-                                Wash the dishses
-                            </div>
-                        </div>
-                        <div class="task-container">
-                            <div class="overflow-act">
-                                ...
-                            </div>
-                            <input type="checkbox" name="" id="">
-                            <div class="task-item">
-                                Wash the dishses
-                            </div>
-                        </div>
-                        <div class="task-container">
-                            <div class="overflow-act">
-                                ...
-                            </div>
-                            <input type="checkbox" name="" id="">
-                            <div class="task-item">
-                                Wash the dishses
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>

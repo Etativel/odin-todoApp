@@ -1,6 +1,7 @@
 // Check which page user at
-let storageKey = "todos";
-function addTodo(){
+import loadTodo from "./loadTodo";
+function addTodo(currentPage){
+    let storageKey = currentPage;
     const taskName = document.querySelector('.task-name-input').value;
     const taskDescription = document.querySelector('.task-desc-input').value;
     const taskDueDate = document.querySelector('.due-date').value;
@@ -24,6 +25,7 @@ function addTodo(){
 
     localStorage.setItem(storageKey, JSON.stringify(existingTasks));
     // localStorage.clear()
+    loadTodo(currentPage)
     
 }
 

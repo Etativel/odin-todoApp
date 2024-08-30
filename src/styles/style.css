@@ -122,6 +122,7 @@ body {
 
 
 /* Form Dialog */
+.projectFormDialog,
 .formDialog {
     position: absolute;
     top: 20%;
@@ -136,6 +137,7 @@ body {
     border: solid black 1px;
 }
 
+.project-dialog-form,
 .dialog-form {
     height: 200px;
     width: 500px;
@@ -145,12 +147,14 @@ body {
     justify-content: space-between;
 }
 
+.project-form-container,
 .form-container {
     /* padding: 24px; */
     display: flex;
     flex-direction: column;
 }
 
+.project-form-btn,
 .form-btn {
     display: flex;
     justify-content: flex-end;
