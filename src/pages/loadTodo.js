@@ -7,7 +7,7 @@ function loadTodo (currentPage){
     pageStyling(currentPage);
     const taskContainerPosition = document.querySelector('.task-container__position')
     taskContainerPosition.innerHTML = ""
-    console.log(taskContainerPosition)
+    // console.log(taskContainerPosition)
     const todoObject = JSON.parse(localStorage.getItem(storageKey))
     if (!todoObject){
         console.log('there is no todo in the storage')

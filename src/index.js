@@ -1,11 +1,11 @@
 import "./styles/style.css"
 import favicon from "./images/icons/to-do-list.png"
-import addTodo from "./pages/addTodo";
 import currentPage from "./pages/currentPage";
+import { setFavicon } from "./pages/domUtils";
+import { attachDialogEventListeners } from "./events/eventListeners";
 
 // Load icon to DOM
-const faviconContainer = document.querySelector(".favicon");
-faviconContainer.href = favicon;
+setFavicon(favicon)
 
 // Show dialog
 const dialogContainer = document.querySelector('.formDialog');
@@ -13,24 +13,8 @@ const closeDialog = document.querySelector('.cancel-form-btn');
 const showDialog = document.querySelector('.add-task-btn');
 const formDialog = document.querySelector('.dialog-form');
 
-showDialog.addEventListener('click', ()=>{
-    dialogContainer.showModal();
-})
+attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer);
 
-closeDialog.addEventListener('click', (e)=>{
-    e.preventDefault();
-    dialogContainer.close();
-    formDialog.reset();
-})
-
-formDialog.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    addTodo(currentPage.getCurrentPage());
-    formDialog.reset();
-    dialogContainer.close();
-    loadProject()
-    loadTodo(currentPage.getCurrentPage());
-})
 
 // Load todo to DOM
 import loadTodo from "./pages/loadTodo";
@@ -80,7 +64,7 @@ upcomingBtn.addEventListener("click", () => {
 // Load add project dialog
 import addProject from "./pages/addProject";
 import loadProject from "./pages/loadProject";
-import pageStyling from "./pages/pageStyling";
+import { attachDialogEventListerens } from "./events/eventListeners";
 const projectFormDialog = document.querySelector('.project-dialog-form');
 const projectDialogContainer = document.querySelector('.projectFormDialog');
 const projectCloseDialog = document.querySelector('.project-cancel-form-btn');

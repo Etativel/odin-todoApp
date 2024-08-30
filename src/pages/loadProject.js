@@ -7,9 +7,9 @@ function loadProject(){
     const projectBtnContainer = document.querySelector('.sub-project-container');
     projectBtnContainer.innerHTML = ""
     const getProject = JSON.parse(localStorage.getItem(storageKey)) || [];
-    console.log(getProject)
+    // console.log(getProject)
     getProject.forEach(project=>{
-        console.log(project)
+        // console.log(project)
         const container = document.createElement('div')
         container.classList.add('sub-project-btn')
         const projectDOM = `
