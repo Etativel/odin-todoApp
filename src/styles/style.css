@@ -12,6 +12,7 @@
     font-family: sans-serif;
 }
 
+/* Positioning */
 body {
     display: flex;
     flex-direction: column;
@@ -21,7 +22,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 0.9fr 4fr;
+    grid-template-columns: 0.8fr 4fr;
 
 }
 
@@ -46,6 +47,7 @@ body {
 
 .todo-main-container {
     flex-grow: 1;
+    scrollbar-width: thin;
     overflow-y: auto;
     /* height: 100%; */
     padding: 0px 55px 84px;
@@ -177,4 +179,206 @@ body {
 
 .checkbox:hover{
     background-color: rgb(109, 226, 255);
+}
+
+/* Sidebar */
+.sidebar {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.sidebar button {
+    border: 0px;
+    background-color: transparent;
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.sidebar button:hover {
+    border: 0px;
+    background-color: #f2efed;
+    cursor:pointer;
+}
+.add-task-btn.small-font.sidebar-btn{
+    color: #a81f00;
+}
+.add-task-btn.small-font.sidebar-btn svg{
+    height: 24px;
+    width: 24px;
+}
+.add-task-btn.small-font.sidebar-btn:hover {
+    border-width: 0px;
+    background-color: #f2efed;
+    cursor:pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-btn__container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+.add-project-btn {
+    width: fit-content;
+    height: fit-content;
+}
+.project-span{
+    margin-right: 100px;
+    width: 100px;
+}
+.small-font {
+    font-size: 0.9rem;
+    font-weight: 100;
+}
+
+button.small-font {
+    text-align: start;
+}
+
+
+
+/* .add-task__sidebar{
+    display: flex;
+    align-items: center;
+} */
+
+/* sidebar icon */
+.sidebar-icon{
+    height: 18px;
+    width: 18px;
+}
+
+.add-task-btn{
+    color: #dc4c3e;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.sidebar-btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-icon{
+    size: 1rem;
+}
+
+/* profile nav */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0xp;
+    padding: 0px;
+}
+
+.profile-btn>svg{
+    padding: 0px;
+    /* height: 24px;
+    width: 24px; */
+    padding: 0; /* Corrected from 0xp to 0 */
+    transform: scale(1.8);
+}
+
+.hide-sidebar-btn>img{
+    padding: 0px;
+    height: 18px;
+    width: 18px;
+}
+.notification-btn>img{
+    padding: 0px;
+    height: 18px;
+    width: 18px;
+}
+
+/* .profile-image-name, */
+.profile-btn{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 16px;
+    margin-right:12px;
+}
+
+.notification__hide-sidebar{
+    display: flex;
+}
+
+
+/*=================Project sidebar=================*/
+.sidebar-project-btn__container{
+    padding-top: 24px;
+}
+
+.add-project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    padding: 6px 0px 6px;
+}
+
+.add-project-container:hover {
+    border: 0px;
+    background-color: #f2efed;
+    cursor:pointer;
+    border-radius: 6px;
+    padding: 6px 0px 6px;
+
+}
+
+.my-project-title {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0;
+    text-align: left;
+    padding: 0.5rem 0rem 0.5rem;
+    font-size: 1rem;
+    color: rgb(94, 94, 94);
+    font-weight: 700;
+}
+
+/* .hide-project-btn.small.btn, */
+.add-project-btn.small.btn{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 28px;
+    color: gray;
+    /* margin-left: 8px */
+    margin-right: 12px;
+}
+/* .hide-project-btn.small.btn:hover, */
+.add-project-btn.small.btn:hover{
+    color: black;
+}
+
+.project-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-project-container{
+    position: sticky;
+}
+
+.sub-project-container{
+    overflow-y: auto;
+    height: 370px;
+    /* scrollbar-width: hidden; */
+}
+
+.sub-project-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
 }
