@@ -23,6 +23,16 @@ function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogC
         loadProject();
         loadTodo(currentPage.getCurrentPage())
     })
+    formDialog.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (formDialog.checkValidity()) {
+                formDialog.dispatchEvent(new Event('submit'));
+            } else {
+                formDialog.reportValidity();
+            }
+        }
+    });
 }
 
 function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingBtn){
@@ -70,6 +80,16 @@ function attachProjectDialogEventListeners(addProjectBtn, projectCloseDialog, pr
         loadProject()
         loadTodo(currentPage.getCurrentPage());
     })
+    projectFormDialog.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (projectFormDialog.checkValidity()) {
+                projectFormDialog.dispatchEvent(new Event('submit'));
+            } else {
+                projectFormDialog.reportValidity();
+            }
+        }
+    });
 
 }
 
