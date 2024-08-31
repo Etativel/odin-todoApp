@@ -5,9 +5,14 @@ import { setFavicon } from "./pages/domUtils";
 import { attachDialogEventListeners, attachSidebarBtnEventListeners, attachProjectDialogEventListeners } from "./events/eventListeners";
 import loadTodo from "./pages/loadTodo";
 import loadProject from "./pages/loadProject";
+import sidebarIcon from "./images/icons/sidebar.png"
+import notificationIcon from "./images/icons/bell.png"
+import { setSidebarIcon } from "./pages/domUtils";
+import { setNotificationIcon } from "./pages/domUtils";
 // Load icon to DOM
 setFavicon(favicon)
-
+setSidebarIcon(sidebarIcon)
+setNotificationIcon(notificationIcon)
 // Load todo to DOM
 document.addEventListener('DOMContentLoaded',()=>{
     currentPage.setCurrentPage('inbox')

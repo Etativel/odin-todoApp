@@ -55,46 +55,90 @@
         </dialog>
         <div class="sidebar">
             <div class="profile">
-                Qwerty
+                <div class="profile-image-name">
+                    <button class="profile-btn ">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-6 sidebar-icon" style="padding: 0;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        </svg>
+                                          
+                            <p class="user-name">
+                                User
+                            </p> 
+                    </button>
+                </div>
+                <div class="notification__hide-sidebar">
+                    <div class="notification">
+                        <button class="notification-btn">
+                            <!-- DomUtils -->
+                    </div>
+                    <div class="hide-sidebar">
+                        <button class="hide-sidebar-btn">
+                            <!-- DomUtils -->
+                        </button>
+
+                    </div>
+                </div>
             </div>
             <div class="sidebar-btn__container">
                 <div class="add-task__sidebar">
-                    <button class="add-task-btn">
+                    <!-- <div class="add-task-icon">
+
+                    </div> -->
+                    <button class="add-task-btn small-font sidebar-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 sidebar-icon add-icon" width="100%" height="100%">
+                            <circle cx="12" cy="12" r="12" fill="#dc4c3e" />
+                            <path fill="white" d="M12 7.5v9m4.5-4.5h-9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                          
                         Add Task
                     </button>
                 </div>
                 <div class="search-task">
-                    <button class="search-btn">
+                    <button class="search-btn small-font sidebar-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray" class="size-6 sidebar-icon search-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                          </svg>
+                                     
                         Search
                     </button>
                 </div>
                 <div class="inbox-task">
-                    <button class="inbox-btn active-btn" id="inbox">
+                    <button class="inbox-btn active-btn small-font sidebar-btn" id="inbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sidebar-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z" />
+                            </svg>
                         Inbox
                     </button>
                 </div>
                 <div class="today-task">
-                    <button class="today-task-btn active-btn" id="today">
+                    <button class="today-task-btn active-btn small-font sidebar-btn" id="today">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sidebar-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+                            </svg>
                         Today Task
                     </button>
                 </div>
                 <div class="upcoming-task">
-                    <button class="upcoming-task-btn active-btn" id="upcoming">
+                    <button class="upcoming-task-btn active-btn small-font sidebar-btn" id="upcoming">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 sidebar-icon">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                            </svg>
                         Upcoming
                     </button>
                 </div>
             </div>
             <div class="sidebar-project-btn__container">
-                <div class="add-project-container">
-                    <span>
-                        My Project
-                    </span>
-                    <button class="add-project-btn">
-                        +
+                <div class="add-project-container medium-font">
+                    <button class="my-project-title">
+                        My Projects
                     </button>
-                    <button class="hide-project-btn">
-                        updown symbol
+                    <button class="add-project-btn small btn">
+                        + 
                     </button>
+                    <!-- <button class="hide-project-btn small btn">
+                        V
+                    </button> -->
                 </div>
                 <div class="sub-project-container">
                     <!-- addProject.js -->
