@@ -11,4 +11,18 @@ function setFavicon(faviconUrl){
     faviconContainer.href = faviconUrl;
 }
 
-export {openDialogUtils, closeDialogUtils, setFavicon}
+function setSidebarIcon(sidebarIconUrl){
+    const sidebarBtn = document.querySelector('.hide-sidebar-btn')
+    const imgContainer = document.createElement('img')
+    imgContainer.src = sidebarIconUrl
+    sidebarBtn.appendChild(imgContainer)
+}
+
+function setNotificationIcon(notificationIconUrl){
+    const sidebarBtn = document.querySelector('.notification-btn')
+    const imgContainer = document.createElement('img')
+    imgContainer.src = notificationIconUrl
+    sidebarBtn.appendChild(imgContainer)
+}
+
+export {openDialogUtils, closeDialogUtils, setFavicon, setSidebarIcon, setNotificationIcon}
