@@ -1,17 +1,26 @@
 // should check if user on project page
 import deleteTodo from "./deleteTodo";
 import pageStyling from "./pageStyling";
+import OnProjectPage from "./onProjectPage";
+const projectNameStorageKey = 'projectList'
 
 function loadTodo (currentPage){
     let storageKey = currentPage;
+    const projectName = JSON.parse(localStorage.getItem(projectNameStorageKey))
     pageStyling(currentPage);
     const taskContainerPosition = document.querySelector('.task-container__position')
     taskContainerPosition.innerHTML = ""
     const todoObject = JSON.parse(localStorage.getItem(storageKey))
-
     const projectTitle = document.querySelector('.project-title')
-    projectTitle.textContent = currentPage.charAt(0).toUpperCase() + currentPage.slice(1)
 
+    //Set the project title based on what page its clicked
+    if (OnProjectPage.getProjectPage()){
+        const findName = projectName.find(item => item.projectId === currentPage)
+        projectTitle.textContent = findName.projectName.charAt(0).toUpperCase() + findName.projectName.slice(1)
+
+    }else{
+        projectTitle.textContent = currentPage.charAt(0).toUpperCase() + currentPage.slice(1)
+    }
     if (!todoObject){
         console.log('there is no todo in the storage')
         return

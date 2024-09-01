@@ -1,7 +1,9 @@
 import currentPage from "./currentPage";
 import loadTodo from "./loadTodo";
 import deleteProject from "./deleteProjects";
+import OnProjectPage from "./onProjectPage";
 const storageKey = 'projectList'
+
 function loadProject(){
 
     const projectBtnContainer = document.querySelector('.sub-project-container');
@@ -31,7 +33,7 @@ function loadProject(){
     const projectBtn = document.querySelectorAll('.active-project-btn');
     projectBtn.forEach(btn => {
         btn.addEventListener('click', () => {
-            
+            OnProjectPage.setProjectPage(true)
             currentPage.setCurrentPage(btn.id)
             console.log(currentPage.getCurrentPage())
             loadTodo(currentPage.getCurrentPage())

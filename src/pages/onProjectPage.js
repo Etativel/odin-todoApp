@@ -11,3 +11,5 @@ class OnProjectPage{
         return this.projectPage
     }
 }
+
+export default new OnProjectPage

@@ -4,6 +4,7 @@ import addTodo from "../pages/addTodo";
 import currentPage from "../pages/currentPage";
 import loadProject from "../pages/loadProject";
 import addProject from "../pages/addProject";
+import OnProjectPage from "../pages/onProjectPage";
 
 function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer){
     showDialog.addEventListener('click',()=>{
@@ -43,6 +44,7 @@ function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingB
     inboxBtn.addEventListener("click", ()=>{
         if (currentPage.getCurrentPage() !== 'inbox') {
             currentPage.setCurrentPage('inbox');
+            OnProjectPage.setProjectPage(false)
             loadTodo(currentPage.getCurrentPage());
         }
     });
@@ -50,6 +52,7 @@ function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingB
     todayBtn.addEventListener("click", () => {
         if (currentPage.getCurrentPage() !== 'today') {
             currentPage.setCurrentPage('today');
+            OnProjectPage.setProjectPage(false)
             loadTodo(currentPage.getCurrentPage());
         }
     });
@@ -57,6 +60,7 @@ function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingB
     upcomingBtn.addEventListener("click", () => {
         if (currentPage.getCurrentPage() !== 'upcoming') {
             currentPage.setCurrentPage('upcoming');
+            OnProjectPage.setProjectPage(false)
             loadTodo(currentPage.getCurrentPage());
         }
     });
