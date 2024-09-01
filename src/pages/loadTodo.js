@@ -21,6 +21,8 @@ function loadTodo (currentPage){
     }else{
         projectTitle.textContent = currentPage.charAt(0).toUpperCase() + currentPage.slice(1)
     }
+
+    // do not check this first before checking the projectList. There is possibility that the current project doesn't have a task yet
     if (!todoObject){
         console.log('there is no todo in the storage')
         return
@@ -30,14 +32,16 @@ function loadTodo (currentPage){
         taskContainer.classList.add("task-container");
         taskContainer.innerHTML = `
             <div class="overflow-act">...</div>
-            <button  class="task-check checkbox">
+            <button  class="task-check checkbox ${todo.priority}">
             
             </button>
-            <div class="task__column">
-                <span class="task-title">${todo.title}</span>
-                <span class="task-desc">${todo.description}</span>
-                <span>${todo.dueDate}</span>
-                <span>${todo.priority}</span>
+            <div class="task__column-container">
+                <div class="task__column">
+                    <span class="task-title">${todo.title}</span>
+                    <span class="task-desc">${todo.description}</span>
+                    <span>${todo.dueDate}</span>
+                </div>
+
             </div>
         `;
         const checkBox = taskContainer.querySelector('.task-check')
