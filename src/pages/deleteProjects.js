@@ -1,14 +1,24 @@
 // import loadTodo from "./loadTodo";
-// import currentPage from "./currentPage";
+import currentPage from "./currentPage";
 import loadProject from "./loadProject";
-
+import loadTodo from "./loadTodo";
+import OnProjectPage from "./onProjectPage";
 const projectListStorage = 'projectList';
 
 function deleteProject(projectId){
     // delete the project list
     const getProjectList = JSON.parse(localStorage.getItem(projectListStorage));
+
     const filterProject = getProjectList.filter(project => project.projectId !== projectId)
     localStorage.setItem(projectListStorage, JSON.stringify(filterProject));
+    console.log(filterProject)
+    console.log(filterProject.length)
+
+    // This if statement set the currentPage to default (inbox). When the project name get deleted and the project list as we store the project name is empty, the addTodo function will check the projectName and it doesn't find it because the projectList are empty. So to prevent that, set the current page to default (inbox) and the OnProjectPage to false.
+    if (filterProject.length === 0){
+        currentPage.setCurrentPage('inbox')
+        OnProjectPage.setProjectPage(false)
+    }
 
     // delete the storage for that project
     const todoKey = projectId;
@@ -16,7 +26,9 @@ function deleteProject(projectId){
     loadProject()
     const projectTitle = document.querySelector('.project-title')
     projectTitle.textContent = ""
-    // loadTodo(currentPage.getCurrentPage())
+    const taskContainerPosition = document.querySelector('.task-container__position')
+    taskContainerPosition.innerHTML = ""
+
 }
 
 export default deleteProject
