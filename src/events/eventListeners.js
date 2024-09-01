@@ -5,7 +5,6 @@ import currentPage from "../pages/currentPage";
 import loadProject from "../pages/loadProject";
 import addProject from "../pages/addProject";
 
-
 function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer){
     showDialog.addEventListener('click',()=>{
         openDialogUtils(dialogContainer)

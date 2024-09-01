@@ -1,5 +1,5 @@
-import loadTodo from "./loadTodo";
-import currentPage from "./currentPage";
+// import loadTodo from "./loadTodo";
+// import currentPage from "./currentPage";
 import loadProject from "./loadProject";
 
 const projectListStorage = 'projectList';
@@ -14,7 +14,9 @@ function deleteProject(projectId){
     const todoKey = projectId;
     localStorage.removeItem(todoKey)
     loadProject()
-    loadTodo(currentPage.getCurrentPage())
+    const projectTitle = document.querySelector('.project-title')
+    projectTitle.textContent = ""
+    // loadTodo(currentPage.getCurrentPage())
 }
 
 export default deleteProject
