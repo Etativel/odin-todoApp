@@ -1,4 +1,5 @@
 // Check which page user at
+import loadAllTask from "./loadAllTask";
 import loadTodo from "./loadTodo";
 function addTodo(currentPage){
     let storageKey = currentPage;
@@ -27,6 +28,7 @@ function addTodo(currentPage){
     localStorage.setItem(storageKey, JSON.stringify(existingTasks));
     // localStorage.clear()
     loadTodo(currentPage)
+    loadAllTask()
     
 }
 

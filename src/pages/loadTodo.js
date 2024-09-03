@@ -6,6 +6,7 @@ const projectNameStorageKey = 'projectList'
 
 function loadTodo (currentPage){
     let storageKey = currentPage;
+    console.log(currentPage)
     const projectName = JSON.parse(localStorage.getItem(projectNameStorageKey))
     pageStyling(currentPage);
     const taskContainerPosition = document.querySelector('.task-container__position')

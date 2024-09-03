@@ -1,5 +1,6 @@
 // import loadTodo from "./loadTodo";
 import currentPage from "./currentPage";
+import loadAllTask from "./loadAllTask";
 import loadProject from "./loadProject";
 import loadTodo from "./loadTodo";
 import OnProjectPage from "./onProjectPage";
@@ -28,6 +29,7 @@ function deleteProject(projectId){
     projectTitle.textContent = ""
     const taskContainerPosition = document.querySelector('.task-container__position')
     taskContainerPosition.innerHTML = ""
+    loadAllTask()
 
 }
 

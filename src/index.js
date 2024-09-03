@@ -9,6 +9,15 @@ import sidebarIcon from "./images/icons/sidebar.png"
 import notificationIcon from "./images/icons/bell.png"
 import { setSidebarIcon } from "./pages/domUtils";
 import { setNotificationIcon } from "./pages/domUtils";
+
+import loadAllTask from "./pages/loadAllTask";
+
+// const testButton = document.querySelector(".this-button-for-test")
+// testButton.addEventListener("click", ()=>{
+//     loadAllTask()
+// })
+
+
 // Load icon to DOM
 setFavicon(favicon)
 setSidebarIcon(sidebarIcon)

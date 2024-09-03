@@ -1,4 +1,5 @@
 import currentPage from "./currentPage"
+import loadAllTask from "./loadAllTask"
 import loadTodo from "./loadTodo"
 
 function deleteTodo (id) {
@@ -12,6 +13,7 @@ function deleteTodo (id) {
     localStorage.setItem(storageKey, JSON.stringify(filterTodo));
     
     loadTodo(currentPage.getCurrentPage())
+    loadAllTask()
 };
 
 export default deleteTodo

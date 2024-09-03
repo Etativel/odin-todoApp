@@ -43,7 +43,11 @@ function loadProject(){
     const deleteBtn = document.querySelectorAll('.delete-project-btn')
     deleteBtn.forEach(btn => {
         btn.addEventListener('click', (e)=>{
+            currentPage.setCurrentPage('inbox')
+            OnProjectPage.setProjectPage(false)
+
             deleteProject(e.target.id)
+            loadTodo(currentPage.getCurrentPage())
         })
     })
 

@@ -5,6 +5,7 @@ import currentPage from "../pages/currentPage";
 import loadProject from "../pages/loadProject";
 import addProject from "../pages/addProject";
 import OnProjectPage from "../pages/onProjectPage";
+import loadAllTask from "../pages/loadAllTask";
 
 function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer, projectTitle){
     showDialog.addEventListener('click',()=>{
@@ -47,13 +48,12 @@ function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingB
     });
 
     showAllTask.addEventListener("click",()=>{
-        // if(currentPage.getCurrentPage() !== 'allTask'){
-        //     currentPage.setCurrentPage('allTask');
-        //     OnProjectPage.setProjectPage(false);
-        //     loadProject(currentPage.getCurrentPage())
-        // }
-        // return
-
+        if(currentPage.getCurrentPage() !== 'All'){
+            currentPage.setCurrentPage('All');
+            OnProjectPage.setProjectPage(false);
+            loadAllTask()
+            loadTodo(currentPage.getCurrentPage())
+        }
         console.log('all task')
     })
 
