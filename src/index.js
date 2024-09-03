@@ -24,7 +24,7 @@ setSidebarIcon(sidebarIcon)
 setNotificationIcon(notificationIcon)
 // Load todo to DOM
 document.addEventListener('DOMContentLoaded',()=>{
-    currentPage.setCurrentPage('inbox')
+    currentPage.setCurrentPage('All')
     loadProject()
     loadTodo(currentPage.getCurrentPage());
 })

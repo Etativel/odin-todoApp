@@ -12,6 +12,9 @@ function addTodo(currentPage){
     if (!taskPriority) {
         taskPriority = 'none';
     };
+    if (storageKey === 'All'){
+        storageKey = 'inbox'
+    }
 
     const task = {
             id: getId,
@@ -19,6 +22,7 @@ function addTodo(currentPage){
             description: taskDescription,
             dueDate: taskDueDate,
             priority: taskPriority,
+            storageKey: storageKey
     };
 
     const existingTasks = JSON.parse(localStorage.getItem(storageKey)) || [];

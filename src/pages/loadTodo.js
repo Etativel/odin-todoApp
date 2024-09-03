@@ -2,6 +2,7 @@
 import deleteTodo from "./deleteTodo";
 import pageStyling from "./pageStyling";
 import OnProjectPage from "./onProjectPage";
+import loadAllTask from "./loadAllTask";
 const projectNameStorageKey = 'projectList'
 
 function loadTodo (currentPage){
@@ -48,8 +49,9 @@ function loadTodo (currentPage){
         const checkBox = taskContainer.querySelector('.task-check')
         checkBox.addEventListener("click",()=>{
             checkBox.style.background = 'rgb(109, 226, 255)';
-            
-            deleteTodo(todo.id);
+            // console.log(todo)
+            // console.log(storageKey)
+            deleteTodo(todo.id, todo.storageKey);
         });
         taskContainerPosition.appendChild(taskContainer);
     });
