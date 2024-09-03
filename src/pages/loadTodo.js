@@ -12,17 +12,13 @@ function loadTodo (currentPage){
     taskContainerPosition.innerHTML = ""
     const todoObject = JSON.parse(localStorage.getItem(storageKey))
     const projectTitle = document.querySelector('.project-title')
-    // const navTitle = document.querySelector('.nav')
 
     //Set the project title based on what page its clicked
     if (OnProjectPage.getProjectPage()){
         const findName = projectName.find(item => item.projectId === currentPage)
         projectTitle.textContent = findName.projectName.charAt(0).toUpperCase() + findName.projectName.slice(1)
-        // navTitle.textContent = `${findName.projectName.charAt(0).toUpperCase() + findName.projectName.slice(1)} task`
-
     }else{
         projectTitle.textContent = currentPage.charAt(0).toUpperCase() + currentPage.slice(1)
-        // navTitle.textContent = `${currentPage.charAt(0).toUpperCase() + currentPage.slice(1)} task`
     }
 
     // do not check this first before checking the projectList. There is possibility that the current project doesn't have a task yet
@@ -30,6 +26,7 @@ function loadTodo (currentPage){
         console.log('there is no todo in the storage')
         return
     }
+
     todoObject.forEach(todo => {
         const taskContainer = document.createElement('div');
         taskContainer.classList.add("task-container");

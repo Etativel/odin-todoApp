@@ -8,8 +8,14 @@ function addProject(){
         projectName: projectName
     };
 
+
     existingProject.push(project)
-    localStorage.setItem(projectKey, JSON.stringify(existingProject));
+    const stringifyProject = JSON.stringify(existingProject)
+    localStorage.setItem(projectKey, stringifyProject);
+
+    const projectStorage = JSON.parse(localStorage.getItem(project.projectId)) || [];
+
+    localStorage.setItem(JSON.parse(JSON.stringify(project.projectId)), JSON.stringify(projectStorage));
 }
 
 export default addProject

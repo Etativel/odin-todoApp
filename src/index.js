@@ -26,8 +26,9 @@ const dialogContainer = document.querySelector('.formDialog');
 const closeDialog = document.querySelector('.cancel-form-btn');
 const showDialog = document.querySelector('.add-task-btn');
 const formDialog = document.querySelector('.dialog-form');
+const projectTitle = document.querySelector(".project-title")
 
-attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer);
+attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer, projectTitle, projectTitle);
 
 // Get all sidebar button
 
@@ -35,8 +36,9 @@ const searchBtn = document.querySelector('.search-btn');
 const inboxBtn = document.querySelector('.inbox-btn');
 const todayBtn = document.querySelector('.today-task-btn');
 const upcomingBtn = document.querySelector('.upcoming-task-btn');
+const allTask = document.querySelector('.all-task-btn')
 
-attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingBtn)
+attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingBtn, allTask)
 
 // Load add project dialog
 const addProjectBtn = document.querySelector('.add-project-btn');

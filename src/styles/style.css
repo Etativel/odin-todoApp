@@ -440,7 +440,8 @@ button.small-font {
 /* Task container */
 .project-title{
     font-size: 1.5rem;
-    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     /* padding-left: 64px; */
     font-weight: 700;
 }
@@ -487,6 +488,13 @@ button.small-font {
 .p3{
     border: #246fe0 solid 2px;
     background-color: #e9f0fc;  
+}
+
+.project-title {
+    background-color: transparent;
+    border: 0px;
+    /* padding: 6px; */
+    cursor: pointer;
 }
 
 /* .p4{

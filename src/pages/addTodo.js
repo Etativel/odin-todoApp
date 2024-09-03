@@ -2,6 +2,7 @@
 import loadTodo from "./loadTodo";
 function addTodo(currentPage){
     let storageKey = currentPage;
+    console.log(currentPage)
     const taskName = document.querySelector('.task-name-input').value;
     const taskDescription = document.querySelector('.task-desc-input').value;
     const taskDueDate = document.querySelector('.due-date').value;

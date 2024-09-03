@@ -6,10 +6,15 @@ import loadProject from "../pages/loadProject";
 import addProject from "../pages/addProject";
 import OnProjectPage from "../pages/onProjectPage";
 
-function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer){
+function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer, projectTitle){
     showDialog.addEventListener('click',()=>{
+        console.log(projectTitle)
         openDialogUtils(dialogContainer)
     });
+
+    projectTitle.addEventListener('click', ()=>{
+        openDialogUtils(dialogContainer)
+    })
 
     closeDialog.addEventListener('click',(e)=>{
         e.preventDefault();
@@ -35,11 +40,22 @@ function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogC
     });
 }
 
-function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingBtn){
+function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingBtn, showAllTask){
 
     searchBtn.addEventListener("click", ()=>{
         // upcoming feature
     });
+
+    showAllTask.addEventListener("click",()=>{
+        // if(currentPage.getCurrentPage() !== 'allTask'){
+        //     currentPage.setCurrentPage('allTask');
+        //     OnProjectPage.setProjectPage(false);
+        //     loadProject(currentPage.getCurrentPage())
+        // }
+        // return
+
+        console.log('all task')
+    })
 
     inboxBtn.addEventListener("click", ()=>{
         if (currentPage.getCurrentPage() !== 'inbox') {
@@ -69,8 +85,11 @@ function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingB
 function attachProjectDialogEventListeners(addProjectBtn, projectCloseDialog, projectFormDialog, projectDialogContainer){
 
     addProjectBtn.addEventListener("click", () => {
+        
         projectDialogContainer.showModal()
+        
     });
+
     
     projectCloseDialog.addEventListener('click', (e)=>{
         e.preventDefault();
