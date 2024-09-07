@@ -78,7 +78,7 @@ function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogC
 function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingBtn, showAllTask){
 
     searchBtn.addEventListener("click", ()=>{
-        // upcoming feature
+        alert("upcoming feature")
     });
 
     showAllTask.addEventListener("click",()=>{
