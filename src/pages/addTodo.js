@@ -1,6 +1,7 @@
 // Check which page user at
 import loadAllTask from "./loadAllTask";
 import loadTodo from "./loadTodo";
+import currentPage from "./currentPage";
 function addTodo(currentPage){
     let storageKey = currentPage;
     console.log(currentPage)

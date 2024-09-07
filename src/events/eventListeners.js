@@ -6,9 +6,11 @@ import loadProject from "../pages/loadProject";
 import addProject from "../pages/addProject";
 import OnProjectPage from "../pages/onProjectPage";
 import loadAllTask from "../pages/loadAllTask";
+import pageStyling from "../pages/pageStyling";
 
 function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer, projectTitle){
     showDialog.addEventListener('click',()=>{
+        // console.log(currentPage.getCurrentPage())
         console.log(projectTitle)
         openDialogUtils(dialogContainer)
     });
@@ -54,7 +56,6 @@ function attachSidebarBtnEventListeners(searchBtn, inboxBtn, todayBtn, upcomingB
             loadAllTask()
             loadTodo(currentPage.getCurrentPage())
         }
-        console.log('all task')
     })
 
     inboxBtn.addEventListener("click", ()=>{

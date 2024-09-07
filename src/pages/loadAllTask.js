@@ -1,3 +1,6 @@
+import currentPage from "./currentPage";
+import pageStyling from "./pageStyling";
+
 function loadAllTask(){
     // check inbox storage
     const existingInboxTodo = JSON.parse(localStorage.getItem('inbox')) || [];
