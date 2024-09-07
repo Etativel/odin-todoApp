@@ -424,10 +424,24 @@ button.small-font {
 
 }
 
+/* delete-project-btn a b c */
+.edit-todo-svg,
 .delete-project-svg{
     pointer-events: none;
 }
 
+.edit-todo-svg{
+    height: 18px;
+    width: 18px;
+    padding: 0px;
+}
+
+.edit-task{
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .project-btn.active-btn.active-project-btn.small-font{
     border-radius: 6px 0px 0px 6px;

@@ -9,7 +9,7 @@ import sidebarIcon from "./images/icons/sidebar.png"
 import notificationIcon from "./images/icons/bell.png"
 import { setSidebarIcon } from "./pages/domUtils";
 import { setNotificationIcon } from "./pages/domUtils";
-
+import { attachEditDialogListeners } from "./events/eventListeners";
 import loadAllTask from "./pages/loadAllTask";
 
 // const testButton = document.querySelector(".this-button-for-test")
@@ -29,13 +29,14 @@ document.addEventListener('DOMContentLoaded',()=>{
     loadTodo(currentPage.getCurrentPage());
 })
 
+// edit dialog
 
 // Show dialog
 const dialogContainer = document.querySelector('.formDialog');
 const closeDialog = document.querySelector('.cancel-form-btn');
 const showDialog = document.querySelector('.add-task-btn');
 const formDialog = document.querySelector('.dialog-form');
-const projectTitle = document.querySelector(".project-title")
+const projectTitle = document.querySelector('.project-title')
 
 attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer, projectTitle, projectTitle);
 

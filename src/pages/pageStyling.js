@@ -1,6 +1,7 @@
 function pageStyling(currentPage) {
     const allButtons = document.querySelectorAll('.active-btn');
     const allDeleteProjectBtn = document.querySelectorAll('.delete-project-btn')
+    // const addTaskBtn = 
     allDeleteProjectBtn.forEach(btn =>{
         if (btn.id === currentPage) {
             btn.style.background = '#ffefe5';

@@ -36,6 +36,34 @@
                 </div>
             </form>
         </dialog>
+<!-- Edit task dialog -->
+<dialog class="formDialog edit">
+    <form action="" class="dialog-form edit">
+        <div class="form-container edit">
+            <input type="text" placeholder="Task name" class="task-name-input edit" required>
+            <input type="text" placeholder="Description" class="task-desc-input edit" required>
+            <div class="task-details edit">
+                <input type="date" class="due-date edit" name="due-date">
+                <select id="" class="task-priority edit">
+                    <option value="" disabled selected>Select priority</option>
+                    <option value="p1">Priority 1</option>
+                    <option value="p2">Priority 2</option>
+                    <option value="p3">Priority 3</option>
+                    <option value="p4">Priority 4</option>
+                    <!-- <option value="none">None</option> -->
+                </select>
+            </div>
+        </div>
+        <div class="form-btn edit" type = 'button'>
+            <!-- <button class="cancel-form-btn edit">
+                Cancel
+            </button> -->
+            <button type="submit" class="submit-form-btn edit">
+                Save Edit
+            </button>
+        </div>
+    </form>
+</dialog>
 <!-- Project Dialog -->
         <dialog class="projectFormDialog">
             <form action="" class="project-dialog-form">

@@ -7,6 +7,38 @@ import addProject from "../pages/addProject";
 import OnProjectPage from "../pages/onProjectPage";
 import loadAllTask from "../pages/loadAllTask";
 import pageStyling from "../pages/pageStyling";
+import { saveEditedTodo } from "../pages/editTodo";
+function attachEditDialogListeners(formDialog, todo){
+    const dialogContainer = document.querySelector('.formDialog.edit');
+    const newFormDialog = formDialog.cloneNode(true);
+    formDialog.replaceWith(newFormDialog);
+
+    // Update the reference to the newly cloned form
+    formDialog = newFormDialog;
+    // closeDialog.addEventListener('click',(e)=>{
+    //     e.preventDefault();
+    //     closeDialogUtils(dialogContainer, formDialog)
+    // });
+
+    formDialog.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        saveEditedTodo(todo);
+        closeDialogUtils(dialogContainer, formDialog);
+        loadAllTask()
+        loadTodo(currentPage.getCurrentPage())
+
+    })
+    formDialog.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            if (formDialog.checkValidity()) {
+                formDialog.dispatchEvent(new Event('submit'));
+            } else {
+                formDialog.reportValidity();
+            }
+        }
+    });
+}
 
 function attachDialogEventListeners(showDialog, closeDialog, formDialog, dialogContainer, projectTitle){
     showDialog.addEventListener('click',()=>{
@@ -116,4 +148,4 @@ function attachProjectDialogEventListeners(addProjectBtn, projectCloseDialog, pr
 
 }
 
-export {attachDialogEventListeners, attachSidebarBtnEventListeners, attachProjectDialogEventListeners}
+export {attachDialogEventListeners, attachSidebarBtnEventListeners, attachProjectDialogEventListeners, attachEditDialogListeners}
