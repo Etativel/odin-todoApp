@@ -13,3 +13,6 @@ yarn build
 ```
 
 to bundle your application
+
+Live Preview:
+https://etativel.github.io/odin-todoApp/
