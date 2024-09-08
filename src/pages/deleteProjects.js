@@ -2,7 +2,6 @@
 import currentPage from "./currentPage";
 import loadAllTask from "./loadAllTask";
 import loadProject from "./loadProject";
-import loadTodo from "./loadTodo";
 import OnProjectPage from "./onProjectPage";
 const projectListStorage = 'projectList';
 

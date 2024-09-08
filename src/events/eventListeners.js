@@ -6,7 +6,6 @@ import loadProject from "../pages/loadProject";
 import addProject from "../pages/addProject";
 import OnProjectPage from "../pages/onProjectPage";
 import loadAllTask from "../pages/loadAllTask";
-import pageStyling from "../pages/pageStyling";
 import { saveEditedTodo } from "../pages/editTodo";
 function attachEditDialogListeners(formDialog, todo){
     const dialogContainer = document.querySelector('.formDialog.edit');

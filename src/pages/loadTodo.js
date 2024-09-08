@@ -2,8 +2,7 @@
 import deleteTodo from "./deleteTodo";
 import pageStyling from "./pageStyling";
 import OnProjectPage from "./onProjectPage";
-import loadAllTask from "./loadAllTask";
-import {saveEditedTodo, showEditTodo} from "./editTodo";
+import {showEditTodo} from "./editTodo";
 import { attachEditDialogListeners } from "../events/eventListeners";
 const projectNameStorageKey = 'projectList'
 

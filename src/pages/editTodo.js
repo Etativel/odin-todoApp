@@ -1,6 +1,4 @@
 import { openDialogUtils } from "./domUtils";
-import { closeDialogUtils } from "./domUtils";
-import loadProject from "./loadProject";
 import loadTodo from "./loadTodo";
 import currentPage from "./currentPage";
 import loadAllTask from "./loadAllTask";
