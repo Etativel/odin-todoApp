@@ -126,24 +126,135 @@ body {
 
 
 /* Form Dialog */
-.projectFormDialog,
-.formDialog {
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.project-name-input::placeholder,
+.task-desc-input::placeholder,
+.task-name-input::placeholder {
+    color: gray;
+    opacity: 0.6; /* Opacity for placeholder only */
+}
+.task-name-input{
+    font-size: x-large;
+    /* color: gray; */
+    /* opacity: 60%; */
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0px;
+    align-items: center;
+}
+
+.task-desc-input{
+    padding: 2px;
+    border: 0px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start;  */
+    height: 100%;
+}
+
+.project-submit-form-btn{
+    font-size: 0.9rem;
+    /* padding: 6px; */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 90px;
+    border-radius: 6px;
+    border: 0px;
+}
+
+.project-cancel-form-btn,
+.submit-form-btn,
+.cancel-form-btn{
+    font-size: 0.9rem;
+    /* padding: 6px; */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 80px;
+    border-radius: 6px;
+    border: 0px;
+}
+
+.task-priority,
+.due-date{
+    font-size: 0.9rem;
+    padding: 6px;
+    border: 0.5px solid gray;
+    border-radius: 6px;
+}
+.project-cancel-form-btn,
+.cancel-form-btn{
+    background-color: rgba(245,245,245,255);
+}
+.project-cancel-form-btn:hover,
+.cancel-form-btn:hover{
+    background-color: rgba(229,229,229,255);
+}
+.project-submit-form-btn,
+.submit-form-btn{
+    background-color: rgba(220,76,62,255);
+    color: white;
+}
+.project-submit-form-btn:hover,
+.submit-form-btn:hover{
+    background-color: rgba(195,57,44,255);
+}
+
+.projectFormDialog{
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 16%;
+    left: 36%;
     /* right: 50%; */
     /* transform: translate(-50%, -50%); */
-
-    border: none;
     padding: 1rem;
     background-color: white;
     border-radius: 8px;
-    border: solid black 1px;
+    border: solid black 0px;
+    filter: drop-shadow(gray 0px 5px 10px);
 }
 
-.project-dialog-form,
+.formDialog {
+    position: absolute;
+    top: 16%;
+    left: 32%;
+    /* right: 50%; */
+    /* transform: translate(-50%, -50%); */
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    border: solid black 0px;
+    filter: drop-shadow(gray 0px 5px 10px);
+}
+
+.project-name-input{
+    font-size: x-large;
+    /* color: gray; */
+    /* opacity: 60%; */
+    font-weight: 600;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 0px;
+    align-items: center;
+}
+
+.project-dialog-form{
+    height: 120px;
+    width: 450px;
+    /* border: solid black 1px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .dialog-form {
-    height: 200px;
+    height: 150px;
     width: 500px;
     /* border: solid black 1px; */
     display: flex;

@@ -14,11 +14,11 @@ function pageStyling(currentPage) {
     allButtons.forEach(btn => {
         const svgElement = btn.querySelector('svg');
         if (currentPage === 'today' || currentPage === 'upcoming'){
-            addTaskBtn.style.pointerEvents = 'none'; // Disable interaction
-            addTaskBtn.style.opacity = '0.5'; // Make it look disabled
+            addTaskBtn.style.pointerEvents = 'none';
+            addTaskBtn.style.opacity = '0.5';
             addTaskBtn.style.transition = 'opacity 0.3s';
         }else{
-            addTaskBtn.style.pointerEvents = 'auto'; // Enable interaction
+            addTaskBtn.style.pointerEvents = 'auto';
             addTaskBtn.style.opacity = '1';
         }
         if (btn.id === currentPage) {

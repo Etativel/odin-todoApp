@@ -12,8 +12,11 @@
         <dialog class="formDialog">
             <form action="" class="dialog-form">
                 <div class="form-container">
-                    <input type="text" placeholder="Task name" class="task-name-input" required>
-                    <input type="text" placeholder="Description" class="task-desc-input" required>
+                    <div>
+                        <input type="text" placeholder="Task name" class="task-name-input" required>
+                        <input type="text" placeholder="Description" class="task-desc-input" required>
+                    </div>
+
                     <div class="task-details">
                         <input type="date" class="due-date" name="due-date">
                         <select id="" class="task-priority">
@@ -31,7 +34,7 @@
                         Cancel
                     </button>
                     <button type="submit" class="submit-form-btn">
-                        Add Task
+                        Add task
                     </button>
                 </div>
             </form>
@@ -40,8 +43,10 @@
 <dialog class="formDialog edit">
     <form action="" class="dialog-form edit">
         <div class="form-container edit">
-            <input type="text" placeholder="Task name" class="task-name-input edit" required>
-            <input type="text" placeholder="Description" class="task-desc-input edit" required>
+            <div>
+                <input type="text" placeholder="Task name" class="task-name-input edit" required>
+                <input type="text" placeholder="Description" class="task-desc-input edit" required>        
+            </div>
             <div class="task-details edit">
                 <input type="date" class="due-date edit" name="due-date">
                 <select id="" class="task-priority edit">
@@ -59,7 +64,7 @@
                 Cancel
             </button> -->
             <button type="submit" class="submit-form-btn edit">
-                Save Edit
+                Save edit
             </button>
         </div>
     </form>
@@ -76,7 +81,7 @@
                         Cancel
                     </button>
                     <button type="submit" class="project-submit-form-btn">
-                        Add Project
+                        Add project
                     </button>
                 </div>
             </form>
