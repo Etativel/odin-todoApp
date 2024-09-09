@@ -1,10 +1,8 @@
-// Check which page user at
 import loadAllTask from "./loadAllTask";
 import loadTodo from "./loadTodo";
 
 function addTodo(currentPage){
     let storageKey = currentPage;
-    console.log(currentPage)
     const taskName = document.querySelector('.task-name-input').value;
     const taskDescription = document.querySelector('.task-desc-input').value;
     const taskDueDate = document.querySelector('.due-date').value;
@@ -16,7 +14,6 @@ function addTodo(currentPage){
     if (storageKey === 'All'){
         storageKey = 'inbox'
     }
-
     const task = {
             id: getId,
             title: taskName,
@@ -25,16 +22,12 @@ function addTodo(currentPage){
             priority: taskPriority,
             storageKey: storageKey
     };
-
     const existingTasks = JSON.parse(localStorage.getItem(storageKey)) || [];
-
     existingTasks.push(task);
 
     localStorage.setItem(storageKey, JSON.stringify(existingTasks));
     // localStorage.clear()
     loadTodo(currentPage)
     loadAllTask()
-    
 }
-
     export default addTodo

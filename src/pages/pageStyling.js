@@ -36,5 +36,4 @@ function pageStyling(currentPage) {
         }
     });
 }
-
 export default pageStyling;

@@ -16,32 +16,17 @@ function showEditTodo(todo){
     taskDescription.value = todo.description
     taskDueDate.value = todo.dueDate
     taskPriority.value = todo.priority || '';
-
     openDialogUtils(dialogContainer)
-
-    console.log(todo.priority)
-
-
 }
-
 function saveEditedTodo(todo) {
-    console.log(todo)
     const storageKey = todo.storageKey; 
-    const taskId = todo.id; 
-    
+    const taskId = todo.id;    
     let existingTasks = JSON.parse(localStorage.getItem(storageKey)) || [];
-
-    
     const taskName = document.querySelector('.task-name-input.edit').value;
     const taskDescription = document.querySelector('.task-desc-input.edit').value;
     const taskDueDate = document.querySelector('.due-date.edit').value;
     const taskPriority = document.querySelector('.task-priority.edit').value;
 
-    console.log(taskName)
-    console.log(taskDescription)
-    console.log(taskDueDate)
-    console.log(taskPriority)
-    
     existingTasks = existingTasks.map(task => {
         if (task.id === taskId) {
             return {
@@ -54,13 +39,8 @@ function saveEditedTodo(todo) {
         }
         return task;
     });
-
     localStorage.setItem(storageKey, JSON.stringify(existingTasks));
     loadTodo(currentPage.getCurrentPage())
     loadAllTask()
-
-    console.log(currentPage.getCurrentPage())
-
 }
-
 export {showEditTodo, saveEditedTodo}

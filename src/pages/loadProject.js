@@ -2,16 +2,13 @@ import currentPage from "./currentPage";
 import loadTodo from "./loadTodo";
 import deleteProject from "./deleteProjects";
 import OnProjectPage from "./onProjectPage";
+
 const storageKey = 'projectList'
-
 function loadProject(){
-
     const projectBtnContainer = document.querySelector('.sub-project-container');
     projectBtnContainer.innerHTML = ""
     const getProject = JSON.parse(localStorage.getItem(storageKey)) || [];
-    // console.log(getProject)
     getProject.forEach(project=>{
-        // console.log(project)
         const container = document.createElement('div')
         container.classList.add('sub-project-btn')
         const projectDOM = `
@@ -29,7 +26,6 @@ function loadProject(){
         container.innerHTML = projectDOM;
         projectBtnContainer.appendChild(container);
     })
-
     const projectBtn = document.querySelectorAll('.active-project-btn');
     projectBtn.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -39,19 +35,14 @@ function loadProject(){
             loadTodo(currentPage.getCurrentPage())
         });
     });
-
     const deleteBtn = document.querySelectorAll('.delete-project-btn')
     deleteBtn.forEach(btn => {
         btn.addEventListener('click', (e)=>{
             currentPage.setCurrentPage('inbox')
             OnProjectPage.setProjectPage(false)
-
             deleteProject(e.target.id)
             loadTodo(currentPage.getCurrentPage())
         })
     })
-
-        
 }
-
 export default loadProject
