@@ -1,12 +1,12 @@
-class OnProjectPage{
-    constructor(){
-        this.projectPage = false;
-    }
-    setProjectPage(value){
-        this.projectPage = value;
-    }
-    getProjectPage(){
-        return this.projectPage
-    }
+class OnProjectPage {
+  constructor() {
+    this.projectPage = false;
+  }
+  setProjectPage(value) {
+    this.projectPage = value;
+  }
+  getProjectPage() {
+    return this.projectPage;
+  }
 }
-export default new OnProjectPage
+export default new OnProjectPage();
